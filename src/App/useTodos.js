@@ -62,23 +62,26 @@ function useTodos(){
         
     },[totalTodos]);*/
 
+    const states = {
+        loading,
+        error,
+        totalTodos,
+        completedTodos,
+        searchValue,
+        searchedtTodos,
+        openModal,
+    }
 
+    const stateUpdaters = {
+        addTodo,
+        setSearchValue,
+        completeTodos,
+        deleteTodo,
+        setOpenModal,
+        sincronizeTodos,
+    }
 
-    return {
-            loading,
-            error,
-            totalTodos,
-            completedTodos,
-            searchValue,
-            addTodo,
-            setSearchValue,
-            searchedtTodos,
-            completeTodos,
-            deleteTodo,
-            openModal,
-            setOpenModal,
-            sincronizeTodos,
-        };
+    return {states, stateUpdaters };
 }
 
 export { useTodos };
